@@ -2,127 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Harrison Blake-Goszyk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'JetBrains Mono', monospace;
-      background-color: #0f0f0f;
-      color: #f0f0f0;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #111;
-      padding: 2rem 1rem;
-      text-align: center;
-      border-bottom: 1px solid #333;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: #39ff14;
-    }
-
-    nav {
-      margin-top: 1rem;
-    }
-
-    nav a {
-      color: #39ff14;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    h2 {
-      border-left: 5px solid #39ff14;
-      padding-left: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem 0;
-      background: #111;
-      color: #39ff14;
-      border-top: 1px solid #333;
-    }
-
-    .highlight {
-      color: #39ff14;
-    }
-
-    a {
-      color: #39ff14;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Harrison Blake-Goszyk</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#physics">Physics</a>
-      <a href="#writing">Writing</a>
-      <a href="#contact">Contact</a>
-    </nav>
   </header>
-
-  <main>
-    <section id="about">
+  <main class="tiles">
+    <a href="about.html" class="tile">
       <h2>About Me</h2>
-      <p>I’m a graduate student at Vanderbilt University studying astrophysics, especially the weird, wild world of black holes, relativity, and extreme phenomena.</p>
-      <p>Outside of research, I enjoy <span class="highlight">writing, reading, cooking, swordfighting </span>, and anything else I can do with friends.</p>
-    </section>
-
-    <section id="physics">
+      <p>Personal journey, hobbies, values</p>
+    </a>
+    <a href="notes.html" class="tile">
       <h2>Physics Notes</h2>
-      <p>Coming soon: detailed explainers, lecture notes, and other things.</p>
-    </section>
-
-    <section id="writing">
+      <p>Concepts, papers, visualizations</p>
+    </a>
+    <a href="writing.html" class="tile">
       <h2>Writing</h2>
-      <p>Coming soon!</p>
-    </section>
-
-    <section id="contact">
+      <p>Short stories, essays, publications</p>
+    </a>
+    <a href="outreach.html" class="tile">
+      <h2>Outreach</h2>
+      <p>Teaching, conferences, other things</p>
+    </a>
+    <a href="cv.html" class="tile">
+      <h2>CV</h2>
+      <p>Academic resume, awards</p>
+    </a>
+    <a href="contact.html" class="tile">
       <h2>Contact</h2>
-      <p>Want to collaborate, chat, or ask me stuff? Reach me at:</p>
-      <p><a href="mailto:h.g.blake-goszyk@vanderbilt.edu">h.g.blake-goszyk@vanderbilt.edu</a></p>
-    </section>
+      <p>Email, socials, how to connect</p>
+    </a>
   </main>
 
   <footer>
-    <p>&copy; 2025 Harrison Blake-Goszyk. All rights reserved.</p>
+    <p>&copy; 2025 Harrison Blake-Goszyk</p>
   </footer>
 </body>
 </html>
