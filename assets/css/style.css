@@ -4,13 +4,20 @@
   padding: 0;
 }
 
+.hero-name {
+  font-family: 'Monoton', cursive;
+  font-size: 4rem;
+  color: #f7ad00; /* or any standout color */
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px #f7ad00, 0 0 16px #f7ad00;
+}
+
 body {
-  font-family: 'JetBrains Mono', monospace;
-  background: #0e0e0e;
-  color: #f8f8f8;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  font-family: 'Black Han Sans', sans-serif;
+  font-weight: 400;
+  color: white;
+  background-color: black;
 }
 
 header {
@@ -29,6 +36,13 @@ header p {
   margin-top: 0.5rem;
 }
 
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  color: #f7ad00; /* Optional glow green or accent color */
+}
+
 main.tiles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -38,7 +52,7 @@ main.tiles {
 }
 
 .tile {
-  background: #1a1a1a;
+  background: #5a451f;
   border: 1px solid #333;
   border-radius: 12px;
   padding: 1.5rem;
