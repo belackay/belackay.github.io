@@ -4,41 +4,101 @@
   <meta charset="UTF-8" />
   <title>Harrison Blake-Goszyk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?&family=Anton&family=Bebas+Neue&family=Black+Han+Sans&family=Staatliches&family=Oswald&family=Ultra&family=Playfair+Display&family=DM+Serif+Display&family=Cinzel&family=Abril+Fatface&family=Fjalla+One&family=Alfa+Slab+One&family=Rubik+Mono+One&family=Luckiest+Guy&family=Bangers&family=Fredericka+the+Great&family=Monoton&display=swap" rel="stylesheet" /><link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?&family=Anton&family=Bebas+Neue&family=Black+Han+Sans&family=Staatliches&family=Oswald&family=Ultra&family=Playfair+Display&family=DM+Serif+Display&family=Cinzel&family=Abril+Fatface&family=Fjalla+One&family=Alfa+Slab+One&family=Rubik+Mono+One&family=Luckiest+Guy&family=Bangers&family=Fredericka+the+Great&family=Monoton&family=Press+Start+2P&family=Righteous&family=Orbitron&family=Unica+One&family=Carter+One&family=Lobster&family=Pacifico&family=Gloria+Hallelujah&family=Special+Elite&family=Creepster&family=Gravitas+One&family=Rye&family=Shojumaru&family=Amatic+SC&family=Mountains+of+Christmas&family=Caveat+Brush&family=Henny+Penny&family=Rampart+One&family=Lato&family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+
 </head>
 <body>
-  <header>
-    <h1 class="hero-name">Harrison Blake-Goszyk</h1>
-  </header>
-  <main class="tiles">
-    <a href="about.html" class="tile">
-      <h2>About Me</h2>
-      <p>Personal journey, hobbies, values</p>
-    </a>
-    <a href="notes.html" class="tile">
-      <h2>Physics Notes</h2>
-      <p>Concepts, papers, visualizations</p>
-    </a>
-    <a href="writing.html" class="tile">
-      <h2>Writing</h2>
-      <p>Short stories, essays, publications</p>
-    </a>
-    <a href="outreach.html" class="tile">
-      <h2>Outreach</h2>
-      <p>Teaching, conferences, other things</p>
-    </a>
-    <a href="cv.html" class="tile">
-      <h2>CV</h2>
-      <p>Academic resume, awards</p>
-    </a>
-    <a href="contact.html" class="tile">
-      <h2>Contact</h2>
-      <p>Email, socials, how to connect</p>
-    </a>
-  </main>
+    <!-- Background canvas container -->
+  <div id="wave-background">
+    <canvas id="hero-canvas"></canvas>
+  </div>
 
+  <!-- Foreground content -->
+  <header class="hero-header">
+    <div class="hero-foreground">
+      <img id="slideshow-image" src="assets/images/kashmir.jpg" alt="Slideshow" />
+      <h1 class="hero-name">Harrison Blake-Goszyk</h1>
+      <h1 class="hero-title">Astrophysics | Writing | XMMA</h1>
+    </div>
+  </header>
+  <div class="section-divider"></div>
+  <div class="tiles-background">
+    <p class="tiles-intro">Hello everyone! This is my personal website.<br> Down below you can see a bunch of the stuff I've been up to.<br> Feel free to contact me if you have any questions :)</p>
+    <main class="tiles">
+        <a href="about.html" class="tile">
+        <h2>About Me</h2>
+        <p>Personal journey, hobbies, values</p>
+        </a>
+        <a href="notes.html" class="tile">
+        <h2>Notes</h2>
+        <p>Concepts, papers, visualizations</p>
+        </a>
+        <a href="writing.html" class="tile">
+        <h2>Writing</h2>
+        <p>Short stories, essays, publications</p>
+        </a>
+        <a href="outreach.html" class="tile">
+        <h2>Outreach</h2>
+        <p>Teaching, conferences, other things</p>
+        </a>
+        <a href="cv.html" class="tile">
+        <h2>CV</h2>
+        <p>Academic resume, awards</p>
+        </a>
+        <a href="contact.html" class="tile">
+        <h2>Contact</h2>
+        <p>Email, socials, how to connect</p>
+        </a>
+    </main>
+  </div>
+  <div class="section-divider"></div>
   <footer>
-    <p>&copy; 2025 Harrison Blake-Goszyk</p>
+    <h3>&copy; 2025 Harrison Blake-Goszyk</h3>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.148.0/build/three.min.js"></script>
+  <script src="assets/js/newwave.js"></script>
+  <script>
+    const imagePaths = [
+      'assets/images/kashmir.jpg',
+      'assets/images/baldmen.jpg',
+      'assets/images/meandpookie.jpg',
+      'assets/images/ohhimark.jpg',
+      'assets/images/researchmeeting.jpg',
+      'assets/images/virgovisit.jpg',
+      'assets/images/goofygoober.jpg',
+      'assets/images/floridaireu.jpg',
+      'assets/images/feelingspooky.jpg',
+      'assets/images/graduation.jpg',
+      'assets/images/grappa10dinner.jpg',
+      'assets/images/spellcasters.jpg',
+      'assets/images/starrynight.jpg',
+      'assets/images/tedx.jpg',
+      'assets/images/thankskelly.jpg',
+      'assets/images/venice.jpg',
+      'assets/images/longhairison.jpg',
+      'assets/images/journeyofalifetime.jpg',
+      'assets/images/gboobserving.jpg',
+      'assets/images/fermilab.jpg',
+      'assets/images/femmefatale.jpg',
+      'assets/images/dumplingmaking.jpg',
+      'assets/images/firsttimetouchingocean.jpg',
+      'assets/images/autismreveal.jpg',
+      'assets/images/jgapihop.jpg',
+      'assets/images/nawlins.jpg',
+      'assets/images/myfamily.jpg',
+      'assets/images/birthdayfriends.jpg',
+      'assets/images/cowboy.jpg',
+      'assets/images/cowboys.jpg',
+      'assets/images/astronaut.JPG',
+      'assets/images/memory.jpg',
+    ];
+  
+    const slideshow = document.getElementById('slideshow-image');
+    const randomIndex = Math.floor(Math.random() * imagePaths.length);
+    slideshow.src = imagePaths[randomIndex];
+  </script>
+  
 </body>
 </html>

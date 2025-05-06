@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Harrison Blake-Goszyk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: black;
+      color: white;
+      overflow: hidden;
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    #wave-canvas {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .hero-name {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      font-family: 'Monoton', sans-serif;
+      font-size: 2.5rem;
+      padding: 1rem;
+      color: #f7ad00;
+    }
+
+    .tile-column {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem;
+      gap: 1rem;
+    }
+
+    .tile {
+      background-color: #5a4224;
+      color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      width: 100%;
+    }
+
+    .image-rotator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    #rotating-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.2;
+    }
+  </style>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+</head>
+<body>
+  <div class="layout-grid">
+    <canvas id="wave-canvas"></canvas>
+    <h1 class="hero-name">Harrison Blake-Goszyk</h1>
+    <div class="tile-column">
+      <a href="about.html" class="tile">About Me</a>
+      <a href="notes.html" class="tile">Physics Notes</a>
+      <a href="writing.html" class="tile">Writing</a>
+      <a href="outreach.html" class="tile">Outreach</a>
+      <a href="cv.html" class="tile">CV</a>
+      <a href="contact.html" class="tile">Contact</a>
+    </div>
+    <div class="image-rotator">
+      <img id="rotating-image" src="assets/images/img1.jpg" alt="Fun image" />
+    </div>
+  </div>
+
+  <!-- Rotating Images Script -->
+  <script>
+    const images = [
+      'assets/images/baldmen.jpg',
+      'assets/images/kashmir.jpg',
+      'assets/images/meandpookie.jpg'
+    ];
+    let current = 0;
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      document.getElementById('rotating-image').src = images[current];
+    }, 5000);
+  </script>
+
+  <!-- Load your wave demo script -->
+  <script src="assets/js/newwave.js"></script>
+</body>
+</html>
