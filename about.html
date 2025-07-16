@@ -17,12 +17,66 @@
     <h1 class="hero-name">About Me</h1>
   </header>
   <div class="section-divider"></div>
-  <main style="padding: 2rem; max-width: 800px; margin: auto;">
-    <p>This will become the place where I yap about myself. Coming soon!</p>
+  <main style="padding: 3rem; max-width: 800px; margin: auto; font-size: 1.25rem">
+    <p>Hello! My name is Harrison Blake-Goszyk. I am a rising second year Ph.D. 
+      student in Astrophysics at Vanderbilt, advised by Prof. Kelly Holley-Bockelmann. 
+      I received my B.S. in Astronomy and Physics from the Ohio State University in 
+      May 2024, advised by Prof. Christopher Hirata.<br><br>I'm like a galactic center weather
+      forecaster, which means I research what types of compact objects (black holes, 
+      neutron stars, etc) will rain down into a galactic center, and what the storm 
+      they make will look like (trajectory modeling, QPEs, perturbation theory,
+      beyond-GR physics, etc). I am a member of the LISA Consortium and the EMIT 
+      (Establishing Multi-messenger astronomy Inclusion Training) program.<br><br>Outside of 
+      work, I like writing historical/science fiction, longsword fighting, gymnastics, 
+      playing the cello, learning languages, reading, and cooking. You can check out 
+      more of the things listed here in the Notes page.</p>
+      <!--<img id="slideshow-image" src="assets/images/kashmir.jpg" alt="Slideshow" style="position: relative; z-index: 3; padding: 2rem 0;"/>-->
   </main>
   <div class="section-divider"></div>
   <footer>
     <p>&copy; 2025 Harrison Blake-Goszyk</p>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.148.0/build/three.min.js"></script>
+     <script>
+     const imagePaths = [
+      'assets/images/kashmir.jpg',
+      'assets/images/baldmen.jpg',
+      'assets/images/meandpookie.jpg',
+      'assets/images/ohhimark.jpg',
+      'assets/images/researchmeeting.jpg',
+      'assets/images/virgovisit.jpg',
+      'assets/images/goofygoober.jpg',
+      'assets/images/floridaireu.jpg',
+      'assets/images/feelingspooky.jpg',
+      'assets/images/graduation.jpg',
+      'assets/images/grappa10dinner.jpg',
+      'assets/images/spellcasters.jpg',
+      'assets/images/starrynight.jpg',
+      'assets/images/tedx.jpg',
+      'assets/images/thankskelly.jpg',
+      'assets/images/venice.jpg',
+      'assets/images/longhairison.jpg',
+      'assets/images/journeyofalifetime.jpg',
+      'assets/images/gboobserving.jpg',
+      'assets/images/fermilab.jpg',
+      'assets/images/femmefatale.jpg',
+      'assets/images/dumplingmaking.jpg',
+      'assets/images/firsttimetouchingocean.jpg',
+      'assets/images/autismreveal.jpg',
+      'assets/images/jgapihop.jpg',
+      'assets/images/nawlins.jpg',
+      'assets/images/myfamily.jpg',
+      'assets/images/birthdayfriends.jpg',
+      'assets/images/cowboy.jpg',
+      'assets/images/cowboys.jpg',
+      'assets/images/astronaut.JPG',
+      'assets/images/memory.jpg',
+      'assets/images/appleorchard.png',
+      'assets/images/crowdsurf.png',
+    ];
+    const slideshow = document.getElementById('slideshow-image');
+    const randomIndex = Math.floor(Math.random() * imagePaths.length);
+    slideshow.src = imagePaths[randomIndex];
+    </script>
   </footer>
 </body>
 </html>

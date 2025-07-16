@@ -162,6 +162,9 @@ main.tiles {
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 2rem;
+  padding: 3rem; 
+  max-width: 800px; 
+  margin: auto;
 }
 
 .tile {
